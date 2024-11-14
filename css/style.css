@@ -1,10 +1,10 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
-    background-color: #131334;
-    color: #ebebeb;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Outfit', sans-serif;
+	background-color: #131334;
+	color: #ebebeb;
 }
 
 .container {
@@ -14,7 +14,6 @@
 
 main {
     margin-bottom: 1.5rem;
-
 }
 
 h1 {
@@ -26,8 +25,10 @@ h1 {
 
 .day {
     display: inline-block;
-    width: 14%;  /* sono 7 div ogniuno contenente un giorno 7 = giorni settimana */
-    height: 130px;   /* max width = 992 / 7 = 140 px. Per stare sicuri facciamo 130 per via di margin */
+    /* 100% diviso 7 fa poco più di 14, per cui i div al 14% saranno 7 per riga, poi vanno daccapo */
+    width: 14%;
+    height: 130px;
+    /* Il numero del giorno è centrato in orizzontale e verticale, per cui avrà una position: absolute, quindi il padre dovrà essere position: relative */
     position: relative;
     border: 1px solid transparent;
     cursor: pointer;
@@ -47,12 +48,22 @@ h1 {
     right: 0;
 }
 
-.da.selected {
+.day.selected {
     border-color: blueviolet;
 }
 
+.dot {
+    position: absolute;
+    left: 45%;
+    bottom: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+
 .currentDay {
-    background-color: white;
+    background-color: pink;
 }
 
 .sunday {
@@ -60,7 +71,6 @@ h1 {
 }
 
 /* Form */
-
 h2 {
     font-size: 36px;
     font-weight: 700;
@@ -74,7 +84,7 @@ h4 {
 #addMeeting div {
     display: inline-block;
     vertical-align: bottom;
-    margin-right: 3.5rem;
+    margin-right: 3.5em;
 }
 
 form {
@@ -90,6 +100,7 @@ input {
     border-radius: 5px;
     font-weight: 700;
 }
+
 input:focus {
     background-color: darkslateblue;
 }
@@ -131,5 +142,8 @@ form button {
     min-height: 36px;
     font-weight: 700;
     padding: 10px;
-    
+}
+
+#appointments {
+    margin-bottom: 30px;
 }
