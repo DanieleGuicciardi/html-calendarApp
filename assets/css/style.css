@@ -25,17 +25,18 @@ h1 {
 
 .day {
     display: inline-block;
-    /* 100% diviso 7 fa poco più di 14, per cui i div al 14% saranno 7 per riga, poi vanno daccapo */
+    /* 100 diviso 7 fa poco più di 14, per cui i div saranno 7 per riga, l'ottavo andrà daccapo */
     width: 14%;
     height: 130px;
-    /* Il numero del giorno è centrato in orizzontale e verticale, per cui avrà una position: absolute, quindi il padre dovrà essere position: relative */
+    /* Il numero del giorno sarà position absolute per poterlo posizione con precisione */
     position: relative;
     border: 1px solid transparent;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .day:hover, .day:hover h3 {
-    background-color: darkslateblue;
+    background-color: #15132e;
 }
 
 .day h3 {
@@ -49,7 +50,7 @@ h1 {
 }
 
 .day.selected {
-    border-color: blueviolet;
+    border-color: #7a408a;
 }
 
 .dot {
@@ -59,7 +60,7 @@ h1 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: blueviolet;
+    background-color: #7a408a;
 }
 
 .currentDay {
@@ -70,7 +71,8 @@ h1 {
     color: red;
 }
 
-/* Form */
+/* Inserimento impegni */
+
 h2 {
     font-size: 36px;
     font-weight: 700;
@@ -84,7 +86,7 @@ h4 {
 #addMeeting div {
     display: inline-block;
     vertical-align: bottom;
-    margin-right: 3.5em;
+    margin-right: 3em;
 }
 
 form {
@@ -99,14 +101,15 @@ input {
     padding: 10px;
     border-radius: 5px;
     font-weight: 700;
+    color: #ebebeb;
 }
 
 input:focus {
-    background-color: darkslateblue;
+    background-color: #2d2a59;
 }
 
 input:focus::placeholder {
-    color: blueviolet;
+    color: #615d9c;
 }
 
 #newMeetingDay {
@@ -127,15 +130,15 @@ input:focus::placeholder {
 }
 
 #newMeetingTime::-webkit-calendar-picker-indicator {
-    background-color: blueviolet;
+    background-color: #7a408a;
     border-radius: 50%;
     cursor: pointer;
 }
 
 form button {
     cursor: pointer;
-    background-color: blueviolet;
-    color: #ebebeb;
+    background-color: #7a408a;
+    color: #efd7f5;
     border: none;
     border-radius: 5px;
     width: 130px;
@@ -145,5 +148,6 @@ form button {
 }
 
 #appointments {
+    display: none;
     margin-bottom: 30px;
 }

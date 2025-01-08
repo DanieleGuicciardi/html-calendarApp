@@ -3,25 +3,24 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>EpiCalendar</title>
+		<title>EpiCalenDario</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 		<link rel="icon" href="assets/img/EPICODE-pitto-color.png" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
 		<div class="container">
 			<main>
-				<!-- name of the month -->
+				<!-- nome del mese -->
 				<h1></h1>
-				<!-- calendar -->
+				<!-- calendario -->
 				<div id="calendar"></div>
-				<!-- insertion of commitments -->
-				<h2>Add Meeting</h2>
+				<!-- inserimento impegni -->
+				<h2>Add meeting</h2>
 				<div id="addMeeting">
 					<div>
 						<h4>Meeting Day</h4>
@@ -30,16 +29,15 @@
 					<form>
 						<div>
 							<h4>Meeting Time</h4>
-							<input type="time" id="newMeetingTime" required />
+							<input type="time" required id="newMeetingTime" />
 						</div>
 						<div>
 							<h4>Meeting Name</h4>
 							<input
 								type="text"
 								id="newMeetingName"
-								placeholder="Inserisci l'impegno"
 								required
-							/>
+								placeholder="Inserisci l'impegno" />
 						</div>
 						<div>
 							<h4>Add</h4>
@@ -49,16 +47,16 @@
 				</div>
 			</main>
 
-			<!-- appointments entered -->
+			<!-- sezione impegni inseriti -->
 			<section>
 				<div id="appointments">
-					<h2>Today s appointments</h2>
-					<!-- appointments list -->
+					<h2>Impegni del giorno:</h2>
+					<!-- lista impegni -->
 					<ul></ul>
 				</div>
 			</section>
 		</div>
 
-		<script src="js/script.js"></script>
+		<script src="assets/scripts/script.js"></script>
 	</body>
 </html>
